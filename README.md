@@ -1,6 +1,13 @@
 # Gears 4 Pack Stats
 ## A Chrome extension that tracks the cards you get while opening packs.
 
+View branches:
+
+* gapi
+* authxhr
+
+for source code.
+
 This extension works from ```https://gearsofwar.com/{locale}/cards/my-packs/{pack}```.
 
 ![open-pack](https://github.com/TheanosLearning/Gears4PackStats/raw/master/images/open-pack.png)
