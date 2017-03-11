@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Gears4 Pack Tracker",
+  "version": "1.0",
+  "description": "Tracks the cards you get while opening packs and saves it to a Google sheet.",
+  "icons": {
+    "48": "images/cards48.png",
+    "128": "images/cards128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/cards.png"
+  },
+  "background": {
+    "scripts": [
+      "background/cards-recorder-2.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gearsofwar.com/*/cards/my-packs*"
+      ],
+      "js": [
+        "content/cards-collector-2.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "285989755435-jk98ih2to7eulv8d68ncki2akhaad4kc.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.metadata.readonly",
+      "https://www.googleapis.com/auth/spreadsheets"
+    ]
+  },
+  "permissions": [
+    "identity",
+    "tabs"
+  ]
+}
