@@ -3,8 +3,8 @@
 
 View branches for source code:
 
-* gapi
-* authxhr
+* [gapi](https://github.com/TheanosLearning/Gears4PackStats/tree/gapi)
+* [authxhr](https://github.com/TheanosLearning/Gears4PackStats/tree/authxhr)
 
 This extension works from ```https://gearsofwar.com/{locale}/cards/my-packs/{pack}```.
 
