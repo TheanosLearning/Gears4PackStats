@@ -1,36 +1,42 @@
 /**
-* cards-collector.js scrapes card titles from
-* https://gearsofwar.com/{locale}/cards/my-packs/{pack}
-* and sends data to the background script cards-recorder.js
-**/
+ * cards-collector.js scrapes card UIDs from
+ * https://gearsofwar.com/{locale}/cards/my-packs/{pack-type}
+ * and sends data to the background script cards-recorder.js
+ **/
 var content = {
+    recording: localStorage.getItem("recording") != null ? localStorage.getItem("recording") : false,
+
     sendPackData: function() {
-        // sends a message to background
-        chrome.runtime.sendMessage({
-            isPack: true,
-            type: pack.getType(),
-            cards: pack.getCards(),
-            gamertag: pack.getGamerTag(),
-            date: pack.getDate()
-        }, function(response) {
-            console.log(response);
-        });
+        // sends a message to background if recording
+        if(content.recording) {
+            chrome.runtime.sendMessage({
+                isPack: true,
+                type: pack.getType(),
+                cards: pack.getCards(),
+                gamertag: pack.getGamerTag(),
+                date: pack.getDate()
+            }, function(response) {
+                console.log(response);
+            });
+        }
     }
 };
 
+/**
+ * var cardCategories = Array.from(document.querySelectorAll('.cardAssembleCategory')).map(card => card.textContent);// ["Skin", "Engineer Skill", "Scout Skill"]
+ * var cardRarity = Array.from(document.querySelectorAll('.cardListImage')).map(card => card.alt).map(rarity => rarity.split(" ")[0]);// ["common", "common", "rare"]
+ * var cards = Array.from(document.querySelectorAll('p.cardAssembleTitle')).map(card => card.textContent);// ["Snow Leopard Gnasher", "Turret Health", "Shotgun Capacity"]
+ **/
 var pack = {
-    // var cardCategories = Array.from(document.querySelectorAll('.cardAssembleCategory')).map(card => card.textContent);// ["Skin", "Engineer Skill", "Scout Skill"]
-    // var cardRarity = Array.from(document.querySelectorAll('.cardListImage')).map(card => card.alt).map(rarity => rarity.split(" ")[0]);// ["common", "common", "rare"]
-    // var cards = Array.from(document.querySelectorAll('p.cardAssembleTitle')).map(card => card.textContent);// ["Snow Leopard Gnasher", "Turret Health", "Shotgun Capacity"]
     getCards: function() {
-        var cards = Array.from(document.querySelectorAll('img.assembleContent')).map(img => img.currentSrc).map(url => url.split("/")).map(path => path[6])
         // var cards = ["DECOY COST", "TURRET HEALTH", "SHOTGUN CAPACITY", "PICKUP DISTANCE", "MARK BOOST"];
+        var cards = Array.from(document.querySelectorAll('img.assembleContent')).map(img => img.currentSrc).map(url => url.split("/")).map(path => path[6])
         return cards;
     },
 
     getType: function() {
-        var packType = document.getElementsByTagName("h3")[0].outerText.split("\n")[0].trim();
         // var packType = "Horde Booster";
+        var packType = document.getElementsByTagName("h3")[0].outerText.split("\n")[0].trim();
         return packType
     },
 
@@ -55,14 +61,23 @@ function readyToReveal(event){
 // send pack data when 'Reveal All' button is clicked
 document.addEventListener("click", readyToReveal);
 
+// uncomment for testing
+// document.onclick = () => content.sendPackData();
+
 chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    console.log(request);
-});
+    function(request, sender, sendResponse) {
+        if(request === "Toggle") {
+            content.recording = !content.recording;
+            localStorage.setItem("recording", content.recording);
+            console.log("Recording : " + content.recording);
+        } else {
+            console.log(request);
+        }
+    });
 
 /**
-* NOTES:
-* https://cdn.gearsofwar.com/gearpacks/cards/WeaponSkinCards/{WeaponUID}/content.png
-* https://cdn.gearsofwar.com/gearpacks/cards/CharacterCards/{CharacterUID}/content.png
-* https://cdn.gearsofwar.com/gearpacks/cards/DeployableCards/{SkillUID}/content.png
-**/
+ * NOTES:
+ * https://cdn.gearsofwar.com/gearpacks/cards/WeaponSkinCards/{WeaponUID}/content.png
+ * https://cdn.gearsofwar.com/gearpacks/cards/CharacterCards/{CharacterUID}/content.png
+ * https://cdn.gearsofwar.com/gearpacks/cards/DeployableCards/{SkillUID}/content.png
+ **/
