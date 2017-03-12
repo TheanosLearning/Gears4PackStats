@@ -12,7 +12,7 @@
   },
   "background": {
     "scripts": [
-      "background/cards-recorder-2.js"
+      "background/cards-recorder.js"
     ]
   },
   "content_scripts": [
@@ -21,7 +21,7 @@
         "https://gearsofwar.com/*/cards/my-packs*"
       ],
       "js": [
-        "content/cards-collector-2.js"
+        "content/cards-collector.js"
       ]
     }
   ],
