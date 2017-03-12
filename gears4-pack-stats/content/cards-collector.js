@@ -29,7 +29,7 @@ var pack = {
     },
 
     getType: function() {
-        var packType = document.getElementsByTagName("h3")[0].outerText.split("\n")[0].trim();
+        var packType = document.querySelector('.packOpenHeader .text-nowrap').innerText.trim();
         // var packType = "Horde Booster";
         return packType
     },
