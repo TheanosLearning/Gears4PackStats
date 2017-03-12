@@ -5,7 +5,7 @@
 * See: https://developers.google.com/sheets/api/quickstart/js the JavsScript
 * quickstart for more information on the google sheets api v4.
 **/
-const SHEET_NAME = "Gears4 Pack Stats";
+const SHEET_NAME = "GOW4 Pack Stats";
 var SHEET_ID;
 var recording = false;
 var sheetSet = false;
