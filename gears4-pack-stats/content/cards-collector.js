@@ -4,7 +4,8 @@
  * and sends data to the background script cards-recorder.js
  **/
 var content = {
-    recording: localStorage.getItem("recording") != null ? localStorage.getItem("recording") : false,
+    recording: localStorage.getItem("recording") != null ?
+        JSON.parse(localStorage.getItem("recording")) : false,
 
     sendPackData: function() {
         // sends a message to background if recording
