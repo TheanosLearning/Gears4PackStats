@@ -97,7 +97,7 @@ var background = {
 
     recordPack: function(pack) {
         xhrWithAuth("POST", sheet.url(pack.type + "!A:H"),
-            sheet.value([null, ...pack.cards, pack.gamertag, pack.date]),
+            sheet.value([null, pack.date, pack.gamertag, ...pack.cards]),
             onResponse);
     },
 
