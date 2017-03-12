@@ -96,7 +96,7 @@ var background = {
             range: pack.type + '!A:H',
             valueInputOption: "USER_ENTERED",
             values: [
-                [null, ...pack.cards, pack.gamertag, pack.date]
+                [null, pack.date, pack.gamertag, ...pack.cards]
             ]
         }).then(function(response) {
             background.sendMessage("Appended [" + pack.cards + "] to " + response.result.tableRange);
