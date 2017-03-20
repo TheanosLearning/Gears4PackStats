@@ -4,14 +4,9 @@
  * and sends data to the background script cards-recorder.js
  **/
 var content = {
-    recording: localStorage.getItem("recording") != null ?
-        JSON.parse(localStorage.getItem("recording")) : false,
-
     sendPackData: function() {
-        // sends a message to background if recording
-        if(content.recording) {
+        // sends a message to background
             chrome.runtime.sendMessage({
-                isPack: true,
                 type: pack.getType(),
                 cards: pack.getCards(),
                 gamertag: pack.getGamerTag(),
@@ -20,7 +15,6 @@ var content = {
                 console.log(response);
             });
         }
-    }
 };
 
 /**
@@ -67,13 +61,7 @@ document.addEventListener("click", readyToReveal);
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        if(request === "Toggle") {
-            content.recording = !content.recording;
-            localStorage.setItem("recording", content.recording);
-            console.log("Recording : " + content.recording);
-        } else {
-            console.log(request);
-        }
+        console.log(request);
     });
 
 /**

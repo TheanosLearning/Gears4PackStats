@@ -5,19 +5,9 @@
  **/
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        if(request.isPack && background.recording) {
-            sendResponse("Attempting to recording pack...");
-
-            background.recordPack(request);
-        } else {
-            sendResponse("Not a pack or not recording");
-        }
+        sendResponse("Attempting to recording pack...");
+        background.recordPack(request);
     });
-
-// click extension icon to toggle recording
-chrome.browserAction.onClicked.addListener(() => {
-    background.toggleOnOff();
-});
 
 function onResponse(error, status, response) {
     if (!error && status == 200) {
@@ -81,19 +71,22 @@ function xhrWithAuth(method, url, rowData, callback) {
  **/
 
 var sheet = {
+
     baseUrl: "https://sheets.googleapis.com/v4/spreadsheets/",
     id: "1JMSBn2s6GQxhn9ylj2INB0kQFF0G7tqMLT4y0p31upk",
     queryParams: "valueInputOption=USER_ENTERED",
+
     url: function(range) {
         return sheet.baseUrl + sheet.id + "/values/" + range + ":append?" + sheet.queryParams;
     },
+
     value: function(row) {
         return {"values": [row]};
     }
+
 }
 
 var background = {
-    recording: false,
 
     recordPack: function(pack) {
         xhrWithAuth("POST", sheet.url(pack.type + "!A:H"),
@@ -109,12 +102,6 @@ var background = {
                 console.log("Sent message : " + message);
             });
         });
-    },
-
-    toggleOnOff: function() {
-        background.sendMessage("Toggle");
-        background.recording ? chrome.browserAction.setIcon({path: "images/cards.png"})
-            : chrome.browserAction.setIcon({path: "images/cards-recording.png"});
-        background.recording = !background.recording;
     }
+
 };
