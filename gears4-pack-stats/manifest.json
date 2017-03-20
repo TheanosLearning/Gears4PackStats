@@ -4,11 +4,11 @@
   "version": "1.0",
   "description": "Tracks the cards you get while opening packs and saves it to a Google sheet.",
   "icons": {
-    "48": "images/cards48.png",
-    "128": "images/cards128.png"
+    "48": "images/cards-recording48.png",
+    "128": "images/cards-recording128.png"
   },
   "browser_action": {
-    "default_icon": "images/cards.png"
+    "default_icon": "images/cards-recording.png"
   },
   "background": {
     "scripts": [
