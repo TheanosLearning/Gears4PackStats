@@ -5,16 +5,15 @@
  **/
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        sendResponse("Attempting to recording pack...");
+        console.log("Attempting to recording pack...");
         background.recordPack(request);
     });
 
 function onResponse(error, status, response) {
-    if (!error && status == 200) {
-        background.sendMessage("Pack recorded to " + JSON.parse(response).updates.updatedRange);
-    } else {
-        background.sendMessage("Unable to record pack : " + error);
-    }
+    var message = (!error && status == 200)
+        ? JSON.parse(response).updates.updatedRange
+            : error;
+    background.sendMessage({status: status, message: message});
 }
 
 /**
@@ -91,7 +90,7 @@ var background = {
     recordPack: function(pack) {
         xhrWithAuth("POST", sheet.url(pack.type + "!A:H"),
             sheet.value([null, pack.date, pack.gamertag, ...pack.cards]),
-            onResponse);
+        onResponse);
     },
 
     sendMessage: function(message) {
