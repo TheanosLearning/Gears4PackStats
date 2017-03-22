@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://gearsofwar.com/*/cards/my-packs*"
+        "https://gearsofwar.com/*/cards/my-packs/*"
       ],
       "js": [
         "content/cards-collector.js"
