@@ -1,6 +1,6 @@
 # Gears4 Pack Stats
 
-![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/master/images/authxhr-demo.png)
+![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
 This branch only needs access to Google sheets.
 It uses an XMLHttpRequest along with an access token from the [chrome.identity](https://developer.chrome.com/apps/identity) api.
