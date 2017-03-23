@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Gears4 Pack Stats",
-  "short_name": "G4PS"
+  "short_name": "G4PS",
   "version": "1.1",
   "description": "Tracks the cards you get while opening packs and saves it to a community Google sheet for statistics.",
   "icons": {
