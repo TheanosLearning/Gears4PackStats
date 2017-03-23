@@ -27,7 +27,7 @@
   ],
   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
   "oauth2": {
-    "client_id": "285989755435-jk98ih2to7eulv8d68ncki2akhaad4kc.apps.googleusercontent.com",
+    "client_id": "285989755435-udeq1jae076f0q6rlam043088qmdh6g9.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/spreadsheets"
     ]
