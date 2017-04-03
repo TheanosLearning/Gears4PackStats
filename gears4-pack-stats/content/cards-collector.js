@@ -3,7 +3,7 @@
  * https://gearsofwar.com/{locale}/cards/my-packs/{pack-type}
  * and sends data to the background script cards-recorder.js
  **/
- 
+
 var content = {
     sendPackData() {
         // sends a message to background
@@ -59,8 +59,8 @@ var pack = {
     },
 
     getDate() {
-        var date = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-        return date;
+        var date = new Date().toISOString();
+        return date.slice(0,10) + " " + date.slice(11,19);// YYYY-MM-DD hh:mm:ss
     }
 
 };
