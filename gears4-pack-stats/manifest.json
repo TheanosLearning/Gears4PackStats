@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Gears4 Pack Stats",
+  "name": "Gears of War 4 Pack Stats",
   "short_name": "G4PS",
-  "version": "1.1",
+  "version": "1.4.4",
   "description": "Tracks the cards you get while opening packs and saves it to a community Google sheet for statistics.",
   "icons": {
     "48": "images/cards-recording48.png",
@@ -35,6 +35,8 @@
   },
   "permissions": [
     "identity",
-    "tabs"
+    "tabs",
+    "webNavigation",
+    "https://gearsofwar.com/*/cards/my-packs/*"
   ]
 }
