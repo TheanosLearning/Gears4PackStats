@@ -1,4 +1,4 @@
-# Gears4 Pack Stats
+# Gears of War 4 Pack Stats
 
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
