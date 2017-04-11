@@ -3,7 +3,7 @@
  * https://gearsofwar.com/{locale}/cards/my-packs/{pack-type}
  * and sends data to the background script cards-recorder.js
  **/
-
+ 
 var content = {
     sendPackData() {
         // sends a message to background
@@ -65,6 +65,9 @@ var pack = {
 
 };
 
+// this works on mobile and desktop
+// var revealAll = document.querySelector('[data-loc-key="Pack_RevealAll"]');
+// revealAll.closest('button');
 function readyToReveal(event) {
     var element = event.target;
     if(element.id === "reveal-all-desktop"){
@@ -101,7 +104,7 @@ colors.set("legendary", "#C2B75A");
 
 // injects a message above the toolbar div
 function injectMessage(request) {
-    let dashboardUrl = "https://docs.google.com/spreadsheets/d/1JMSBn2s6GQxhn9ylj2INB0kQFF0G7tqMLT4y0p31upk/view#gid=1614938261";
+    let packStatsHomeUrl = "https://docs.google.com/spreadsheets/d/1JMSBn2s6GQxhn9ylj2INB0kQFF0G7tqMLT4y0p31upk/view#gid=402222379";
     let {status, message} = request;// es6 destructuring
     let toolbar = document.querySelector('[role="toolbar"]');
     let h4 = document.createElement('h4');
@@ -110,7 +113,7 @@ function injectMessage(request) {
         let cards = pack.getCards();
         h4.style.color = "#FFFFFF";
         h4.innerHTML = `${cards.map(card => `<span style="color:${colors.get(card.rarity)}">${card.title}</span>`).join(', ')} 
-                            saved to <a href=${dashboardUrl} target="_blank">${message}</a>`;// link to dashboard
+                            saved to <a href=${packStatsHomeUrl} target="_blank">${message}</a>`;// link to stats home sheet
         console.info("Pack saved to sheet.");
     } else {
         h4.style.color = "#FF0033";
@@ -132,6 +135,7 @@ function displayVersion() {
     }
 }
 
+// disable the reveal all button until all of the cards are loaded into the pack
 function waitForCards() {
     let cardsLoaded = false;
     let cards = document.querySelector('.revealPack .card-flex');

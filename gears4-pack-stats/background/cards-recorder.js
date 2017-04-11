@@ -44,20 +44,29 @@ chrome.runtime.onMessage.addListener(
 //     });
 // }
 
+
+var redirectFilter = {urls: ["https://gearsofwar.com/auth*"]};
+var signingOut = false;
+chrome.webRequest.onBeforeRedirect.addListener(function(details) {
+    signingOut = details.url.includes("/auth/sign-out") ? true : false;
+}, redirectFilter);
+
 // execute the content script whenever user navigates to packs page
 // http://www.toptip.ca/2010/01/google-chrome-content-script.html
 // http://stackoverflow.com/questions/20865581/chrome-extension-content-script-not-loaded-until-page-is-refreshed
+var navFilter = {urls: ["https://gearsofwar.com/*/cards/my-packs/*"]};
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     chrome.tabs.query({
         active: true,
         currentWindow: true
     }, function(tabs) {
-        if (/https:\/\/gearsofwar.com\/.*\/cards\/my-packs\/.*/.test(tabs[0].url)) {
-            chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
+        if (/https:\/\/gearsofwar.com\/.*\/cards\/my-packs\/.*/.test(tabs[0].url) && !signingOut) {
+            // chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
+            chrome.tabs.reload(tabs[0].id);
             // executeContent();
         }
     });
-});
+}, navFilter);
 
 /**
  * There are some cases, such as when the user changes their password, when non-expired access tokens will stop working.
