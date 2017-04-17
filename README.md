@@ -1,4 +1,5 @@
-# Gears of War 4 Pack Stats
+# Gears of War 4 Pack Stats v1.4.8
+###### Now on the [Chrome Web Store](https://chrome.google.com/webstore/detail/gears-of-war-4-pack-stats/mlnjmcoibfinbdillhmmnpodpfgihlgg)!
 
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
