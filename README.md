@@ -8,9 +8,6 @@
 
 <br>![gif demo](https://media.giphy.com/media/gpy8DXmK7qF68/giphy.gif)
 
-
-![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
-
 #### About
 * This branch makes an authenticated XMLHttpRequest using the [Google Sheets API v4](https://developers.google.com/sheets/api/reference/rest/)
 * An access token is created from the [chrome.identity](https://developer.chrome.com/apps/identity) API.
@@ -22,3 +19,7 @@
 #### Notes
 * This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
 * You can check the token status in the _Identity API Token Cache_ (chrome://identity-internals)
+
+> Pack tax!
+
+![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
