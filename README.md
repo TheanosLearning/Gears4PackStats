@@ -8,6 +8,7 @@
 
 <br>![gif demo](https://media.giphy.com/media/gpy8DXmK7qF68/giphy.gif)
 
+`Sample Output`
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
 #### About
