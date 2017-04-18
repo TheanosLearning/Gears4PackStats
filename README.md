@@ -3,7 +3,7 @@
 
 ## [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges) &nbsp; [authxhr](https://github.com/TheanosLearning/Gears4PackStats/tree/authxhr)
 ## [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges) &nbsp; [gapi](https://github.com/TheanosLearning/Gears4PackStats/tree/gapi)
-
+<br>
 ##### This extension works from [gearsofwar.com](https://gearsofwar.com/cards).
 
 ![open-pack](https://github.com/TheanosLearning/Gears4PackStats/raw/master/images/open-pack.png)
