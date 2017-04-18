@@ -1,4 +1,4 @@
-# Gears 4 Pack Stats
+# Gears of War 4 Pack Stats
 ### A Chrome extension that tracks the cards you get while opening packs.
 
 ##
