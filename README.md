@@ -14,11 +14,11 @@
 
 #### Requirements
 * Google Chrome
-* A client Id for authentication and a sheet Id for where the data should be written to
 
 #### Notes
 * This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
 * You can check the token status in the _Identity API Token Cache_ (chrome://identity-internals)
+* To run this extension with your own Google sheet, simply update the sheet Id in `cards-recorder.js`
 
 
 > <br>...and a pack tax :)
