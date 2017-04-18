@@ -4,7 +4,7 @@
 
 ## Now on the [Chrome Web Store](https://chrome.google.com/webstore/detail/gears-of-war-4-pack-stats/mlnjmcoibfinbdillhmmnpodpfgihlgg)!
 
-#### Find us on Discord [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
+> Find us on Discord [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
 
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
