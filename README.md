@@ -8,8 +8,8 @@
 
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
-This branch only needs access to Google sheets.
-It uses an XMLHttpRequest along with an access token from the [chrome.identity](https://developer.chrome.com/apps/identity) api.
+#### About
+This branch makes an authenticated XMLHttpRequest using the [Google Sheets API v4](https://developers.google.com/sheets/api/reference/rest/) with the access token being granted from the [chrome.identity](https://developer.chrome.com/apps/identity) API.
 
 #### Requirements
 * Google Chrome
@@ -17,4 +17,4 @@ It uses an XMLHttpRequest along with an access token from the [chrome.identity](
 
 #### Notes
 * This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
-* You can check the token status in the _Identity API Token Cache) (chrome://identity-internals)
+* You can check the token status in the _Identity API Token Cache_ (chrome://identity-internals)
