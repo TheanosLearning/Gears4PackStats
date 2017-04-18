@@ -11,9 +11,10 @@
 This branch only needs access to Google sheets.
 It uses an XMLHttpRequest along with an access token from the [chrome.identity](https://developer.chrome.com/apps/identity) api.
 
-##### Requirements
+#### Requirements
 * Google Chrome
 * A client Id for authentication and a sheet Id for where the data should be written to.
 
-##### Notes
-This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the [extension settings](chrome://extensions/)
+#### Notes
+* This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
+* You can check the token status in the _Identity API Token Cache) (chrome://identity-internals)
