@@ -6,7 +6,7 @@
 
 > Join the Gears Project Development channel on Discord <br> [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
 
-![gif demo](https://media.giphy.com/media/gpy8DXmK7qF68/giphy.gif)
+<br>![gif demo](https://media.giphy.com/media/gpy8DXmK7qF68/giphy.gif)
 
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
 
