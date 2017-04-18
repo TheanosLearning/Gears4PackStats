@@ -18,7 +18,7 @@
 #### Notes
 * This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
 * You can check the token status in the _Identity API Token Cache_ (chrome://identity-internals)
-* To run this extension with your own Google sheet, simply update the sheet Id in `cards-recorder.js`
+* To run this extension with your own Google sheet, simply update the sheet Id in `[cards-recorder.js](https://github.com/TheanosLearning/Gears4PackStats/blob/authxhr/gears4-pack-stats/background/cards-recorder.js#L158)`
 
 
 > <br>...and a pack tax :)
