@@ -6,7 +6,7 @@ View branches for source code:
 * [authxhr](https://github.com/TheanosLearning/Gears4PackStats/tree/authxhr)
 * [gapi](https://github.com/TheanosLearning/Gears4PackStats/tree/gapi)
 
-This extension works from ![gearsofwar](https://gearsofwar.com/cards).
+This extension works from ![gearsofwar](https://gearsofwar.com/en-us/cards).
 
 ![open-pack](https://github.com/TheanosLearning/Gears4PackStats/raw/master/images/open-pack.png)
 
