@@ -10,7 +10,7 @@
 
 #### About
 * This branch makes an authenticated XMLHttpRequest using the [Google Sheets API v4](https://developers.google.com/sheets/api/reference/rest/)
-* An access token is created from the [Chrome Identity API](https://developer.chrome.com/apps/identity)
+* An access token is created using the [Chrome Identity API](https://developer.chrome.com/apps/identity)
 
 #### Requirements
 * Google Chrome
