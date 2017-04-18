@@ -20,6 +20,6 @@
 * This branch does not offer a toggle feature. Once it is installed it will actively run unless disabled from the extension setting (chrome://extensions)
 * You can check the token status in the _Identity API Token Cache_ (chrome://identity-internals)
 
-<br> 
-> ...and a pack tax :)
+
+> <br>...and a pack tax :)
 ![demo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/authxhr-demo.png)
