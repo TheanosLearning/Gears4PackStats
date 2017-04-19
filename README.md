@@ -13,3 +13,6 @@ Google sheet [Gears4 Pack Stats](https://docs.google.com/spreadsheets/d/1JMSBn2s
 as drop rate, card frequency, average scrap per pack and more!
 
 ![pack-stats-dashboard](https://github.com/TheanosLearning/Gears4PackStats/raw/master/images/pack-stats-dashboard.png)
+
+##### Have questions or comments?
+Feel free to leave them on [this thread](http://bit.ly/2og0s0s) in the Gears forums.
