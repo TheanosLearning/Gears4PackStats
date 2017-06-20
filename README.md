@@ -4,7 +4,7 @@
 
 > Join the Gears Project Development channel on Discord <br> [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
 
-#### Now with card glow on pack open!
+### Now with Card Glow on Pack Open!
 <br>![gif demo](https://media.giphy.com/media/QLen4sArKARjO/giphy.gif)
 
 #### About
