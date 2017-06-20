@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Gears of War 4 Pack Stats",
   "short_name": "G4PS",
-  "version": "1.4.8",
+  "version": "1.5.0",
   "description": "Tracks the cards you get while opening packs and saves it to a community Google sheet for statistics.",
   "icons": {
     "48": "images/cards-recording48.png",
@@ -23,12 +23,18 @@
       ],
       "js": [
         "content/cards-collector.js"
+      ],
+      "css": [
+        "styles/cards-glow.css"
       ]
     }
   ],
+  "web_accessible_resources": [
+    "styles/cards-glow.css"
+  ],
   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
   "oauth2": {
-    "client_id": "285989755435-udeq1jae076f0q6rlam043088qmdh6g9.apps.googleusercontent.com",
+    "client_id": "285989755435-86eunjvk09hosmarfqia9ocnagke03c4.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/spreadsheets"
     ]

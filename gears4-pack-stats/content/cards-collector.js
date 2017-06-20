@@ -3,7 +3,14 @@
  * https://gearsofwar.com/{locale}/cards/my-packs/{pack-type}
  * and sends data to the background script cards-recorder.js
  **/
- 
+
+(function injectStyle() {
+    let style = document.createElement('link');
+    style.rel = "stylesheet"; style.type = "text/css";
+    style.href = chrome.extension.getURL("/styles/cards-glow.css");
+    document.head.appendChild(style);
+})();
+
 var content = {
     sendPackData() {
         // sends a message to background
@@ -19,6 +26,11 @@ var content = {
 };
 
 var pack = {
+
+    glow() {
+        let cards = Array.from(document.querySelectorAll("#pack-view .revealPack .card-list-item"));
+        cards.map(card => card.classList.add("hover"));
+    },
 
     getCardUids() {
         var cardUids = Array.from(document.querySelectorAll('img.assembleContent')).map(img => img.currentSrc).map(url => url.split("/")).map(path => path[6])
@@ -137,6 +149,8 @@ function displayVersion() {
 
 // disable the reveal all button until all of the cards are loaded into the pack
 function waitForCards() {
+    // add glow effect
+    pack.glow();
     let cardsLoaded = false;
     let cards = document.querySelector('.revealPack .card-flex');
     if(cards) {

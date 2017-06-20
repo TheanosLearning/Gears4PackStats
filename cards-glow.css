@@ -1,0 +1,77 @@
+      #pack-view .revealPack .card-list-item.hover {
+          z-index: 105 !important;
+      }
+      #pack-view .revealPack .card-list-item.hover .cardName {
+          -webkit-transform: none;
+          transform: none;
+          -webkit-transform-origin: unset;
+          transform-origin: unset;
+          -webkit-transition: none;
+          transition: none;
+      }
+      #pack-view .revealPack .card-list-item.hover .cardListImage.cardListImageLoaded {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transform-origin: initial;
+          transform-origin: initial;
+          opacity: 0;
+      }
+      #pack-view .revealPack .card-list-item.hover {
+          opacity: 1;
+          -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+          -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverDarken,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverDarken,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverDarken,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverDarken {
+          opacity: 0;
+          -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+          -webkit-transition: opacity 0.8s;
+          transition: opacity 0.8s;
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverGlow1,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverGlow1,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverGlow1,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverGlow1 {
+          opacity: 1;
+          -webkit-transition: opacity 0.25s;
+          transition: opacity 0.25s;
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverGlow2,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverGlow2,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverGlow2,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverGlow2 {
+          opacity: 1;
+          -webkit-transition: opacity ease-in-out 0.6s;
+          transition: opacity ease-in-out 0.6s;
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverGlow3,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverGlow3,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverGlow3,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverGlow3 {
+          opacity: 1;
+          -webkit-transition: opacity ease-out 0.8s;
+          transition: opacity ease-out 0.8s;
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverGlow4,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverGlow4,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverGlow4,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverGlow4 {
+          opacity: 1;
+          -webkit-transition: opacity ease-in-out 1.15s;
+          transition: opacity ease-in-out 1.15s;
+      }
+      #pack-view .revealPack .card-list-item.hover .glowCommon .hoverParticles,
+      #pack-view .revealPack .card-list-item.hover .glowRare .hoverParticles,
+      #pack-view .revealPack .card-list-item.hover .glowEpic .hoverParticles,
+      #pack-view .revealPack .card-list-item.hover .glowLegendary .hoverParticles {
+          display: block;
+      }
+      #pack-view .revealPack .card-list-item .hoverParticles div {
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+      }
