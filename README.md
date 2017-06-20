@@ -6,7 +6,7 @@
 
 > Join the Gears Project Development channel on Discord <br> [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
 
-<br>![gif demo](https://media.giphy.com/media/gpy8DXmK7qF68/giphy.gif)
+<br>![gif demo](https://media.giphy.com/media/QLen4sArKARjO/giphy.gif)
 
 #### About
 * This branch makes an authenticated XMLHttpRequest using the [Google Sheets API v4](https://developers.google.com/sheets/api/reference/rest/)
