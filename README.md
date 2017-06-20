@@ -1,11 +1,10 @@
-# Gears of War 4 Pack Stats `v1.4.8`
+# Gears of War 4 Pack Stats `v1.5.0`
 
 ![logo](https://github.com/TheanosLearning/Gears4PackStats/raw/authxhr/images/cards-red-svg.png)
 
-### Now on the [Chrome Web Store](https://chrome.google.com/webstore/detail/gears-of-war-4-pack-stats/mlnjmcoibfinbdillhmmnpodpfgihlgg)!
-
 > Join the Gears Project Development channel on Discord <br> [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/9yhnD)
 
+#### Now with card glow on pack open!
 <br>![gif demo](https://media.giphy.com/media/QLen4sArKARjO/giphy.gif)
 
 #### About
