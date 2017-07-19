@@ -173,8 +173,9 @@ var sheet = {
 var background = {
 
     recordPack(pack) {
-        post.xhrWithAuth(sheet.url(pack.type + "!A:H"),
-            sheet.value([null, pack.date, pack.gamertag, ...pack.cards]),
+        // All packs now go to the master sheet `Pack Data`
+        post.xhrWithAuth(sheet.url("Pack Data" + "!A:H"),
+            sheet.value([pack.date, pack.gamertag, pack.type, ...pack.cards]),
                 post.onResponse);
     },
 
